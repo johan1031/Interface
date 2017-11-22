@@ -1,5 +1,5 @@
 
-public class Person {
+public class Person implements Comparable<Person> {
 
 	private String fname;
 	private String lname;
@@ -24,6 +24,22 @@ public Person(String Fullname){
 	}
 	public String getLname() {
 		return lname;
+	}
+
+	@Override
+	public int compareTo(Person o) {
+		String l = lname.substring(0, 2);
+		String i = fname.substring(0, 2);
+		
+		if(l.compareTo(o.getLname()) == 0){
+			return i.compareTo(o.getFname());
+			
+		}
+		else{
+			return l.compareTo(o.getLname());
+		}
+		
+		
 	} 
 		
 

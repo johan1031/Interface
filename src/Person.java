@@ -5,6 +5,12 @@ public class Person {
 	private String lname;
 	
 
+	public String getFname() {
+		return fname;
+	}
+	public String getLname() {
+		return lname;
+	} 
 		
 
 	

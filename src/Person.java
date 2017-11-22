@@ -5,7 +5,7 @@ public class Person implements Comparable<Person> {
 	private String lname;
 	private int index; 
 	
-public Person(String Fullname){
+	Person(String Fullname){
 		
 		char[] cArr = Fullname.toCharArray();
 		
@@ -17,6 +17,10 @@ public Person(String Fullname){
 		this.fname = Fullname.substring(index);
 		this.lname = Fullname.substring(0, index);
 		
+	}
+	
+	public String getFullName(){
+		return lname + " " + fname;
 	}
 	
 	public String getFname() {
